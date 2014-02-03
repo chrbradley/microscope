@@ -2,6 +2,11 @@
 // available to the whole application
 Posts = new Meteor.Collection('posts');
 
+Posts.allow({
+  update: ownDocument,
+  remove: ownsDocument
+});
+
 Meteor.methods({
   post: function(postAttributes) {
     var user = Meteor.user(),
