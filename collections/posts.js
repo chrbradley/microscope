@@ -3,7 +3,7 @@
 Posts = new Meteor.Collection('posts');
 
 Posts.allow({
-  update: ownDocument,
+  update: ownsDocument,
   remove: ownsDocument
 });
 
