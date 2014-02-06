@@ -15,7 +15,7 @@ if (Posts.find().count() === 0) {
     userId: sacha._id,
     author: sacha.profile.name,
     url: 'http://sachagreif.com/introducing-telescope/',
-    submitted: now - 7 * 3600 * 1000,
+    submitted: now - 3 * 3600 * 1000,
     commentsCount: 2,
     upvoters: [], votes: 0
   });
@@ -23,14 +23,14 @@ if (Posts.find().count() === 0) {
     postId: telescopeId,
     userId: tom._id,
     author: tom.profile.name,
-    submitted: now - 5 * 3600 * 1000,
+    submitted: now - 2 * 3600 * 1000,
     body: 'Interesting project Sacha, can I get involved?'
   });
   Comments.insert({
     postId: telescopeId,
     userId: sacha._id,
     author: sacha.profile.name,
-    submitted: now - 3 * 3600 * 1000,
+    submitted: now - 1 * 3600 * 1000,
     body: 'You sure can Tom!'
   });
   Posts.insert({
@@ -57,7 +57,7 @@ if (Posts.find().count() === 0) {
       author: sacha.profile.name,
       userId: sacha._id,
       url: 'http://google.com/?q=test-' + i,
-      submitted: now - i * 3600 * 1000,
+      submitted: now - (i+50) * 3600 * 1000,
       commentsCount: 0,
       upvoters: [], votes: 0
     });

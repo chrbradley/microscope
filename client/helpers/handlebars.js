@@ -5,4 +5,4 @@ Handlebars.registerHelper('pluralize', function(n, thing) {
   } else {
     return n + ' ' + thing + 's';
   }
-});s
+});
